@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.volcengine</groupId>
+    <artifactId>apminsight-server-sdk-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+    <name>APMInsight Server Sdk Maven Parent</name>
+    <description>Parent for APMInsight server sdk artifacts </description>
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/volcengine/apminsight-server-sdk-java/issues</url>
+    </issueManagement>
+    <modules>
+        <module>apminsight-server-sdk-metrics</module>
+    </modules>
+
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/volcengine/apminsight-server-sdk-go</url>
+        <connection>scm:git:https://github.com/volcengine/apminsight-server-sdk-go.git</connection>
+        <developerConnection>scm:git:https://github.com/volcengine/apminsight-server-sdk-go.git</developerConnection>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>APMInsight</id>
+            <name>APMInsight Server Sdk</name>
+        </developer>
+    </developers>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+    <distributionManagement>
+        <repository>
+            <id>bintray-bytedancer-Volcengine</id>
+            <name>bytedancer-Volcengine</name>
+            <url>https://api.bintray.com/maven/bytedancer/Volcengine/apminsight-server-sdk-parent/;publish=1</url>
+        </repository>
+    </distributionManagement>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- https://mvnrepository.com/artifact/com.github.jnr/jnr-unixsocket -->
+            <dependency>
+                <groupId>com.github.jnr</groupId>
+                <artifactId>jnr-unixsocket</artifactId>
+                <version>0.38.5</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>3.1.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>3.1.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>3.1.0</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
