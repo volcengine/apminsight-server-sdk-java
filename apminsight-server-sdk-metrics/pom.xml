@@ -54,6 +54,8 @@
                             <artifactId>fb-contrib</artifactId>
                         </plugin>
                     </plugins>
+                    <xmlOutput>true</xmlOutput>
+                    <failOnError>false</failOnError>
                 </configuration>
             </plugin>
             <plugin>
